@@ -1,34 +1,41 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
-function App() {
-  const [count, setCount] = useState(0);
+type Sizes = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
+const Layout = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar maxWidth="xl" height="md" />
+      <main className={`flex flex-grow max-w-screen-xl mx-auto w-full`}>
+        <Outlet />
+      </main>
+      <Footer maxWidth="xl" height="md" />
     </>
   );
-}
+};
+
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+      ],
+    },
+  ]);
+
+  return (
+    <div className="min-h-screen flex flex-col px-4 sm:px-8">
+      <RouterProvider router={router} />
+    </div>
+  );
+};
 
 export default App;
