@@ -53,6 +53,9 @@ const Navbar = ({ height = 'md', maxWidth = 'lg' }: Props) => {
             );
           })}
         </ol>
+        <div className="flex items-center justify-center sm:hidden">
+          <HamButton />
+        </div>
       </div>
     </nav>
   );
