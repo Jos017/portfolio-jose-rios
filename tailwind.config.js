@@ -13,6 +13,12 @@ export default {
         'dark-2': '#555770',
         'dark-3': '#8F90A6',
         'dark-4': '#C7C9D9',
+        'dark-elevation-1': '#2A2B40',
+        'dark-elevation-2': '#2C2D42',
+        'dark-elevation-3': '#2D2E45',
+        'dark-elevation-4': '#2F3047',
+        'dark-elevation-5': '#30324A',
+        'dark-elevation-6': '#32334D',
         'light-0': '#E4E4EB',
         'light-1': '#EBEBF0',
         'light-2': '#F2F2F5',
@@ -33,6 +39,20 @@ export default {
           'Arial',
           'sans-serif',
         ],
+      },
+      dropShadow: {
+        'dark-1':
+          '0px 1px 2px rgba(0, 0, 0, 0.32)',
+        'dark-2':
+          '0px 2px 4px rgba(0, 0, 0, 0.32)',
+        'dark-3':
+          '0px 4px 8px rgba(0, 0, 0, 0.32)',
+        'dark-4':
+          '0px 8px 16px rgba(0, 0, 0, 0.32)',
+        'dark-5':
+          '0px 16px 24px rgba(0, 0, 0, 0.32)',
+        'dark-6':
+          '0px 20px 32px rgba(0, 0, 0, 0.32)',
       },
       fontSize: {
         'heading-1': ['2.5rem', { lineHeight: '3.375rem', fontWeight: 700 }],

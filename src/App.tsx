@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <>
       <Navbar maxWidth="xl" height="md" />
-      <main className={`flex flex-grow max-w-screen-xl mx-auto w-full`}>
+      <main className="flex flex-grow max-w-screen-xl mx-auto w-full p-4 sm:p-8">
         <Outlet />
       </main>
       <Footer maxWidth="xl" height="md" />
@@ -32,7 +32,7 @@ const App = () => {
   ]);
 
   return (
-    <div className="min-h-screen flex flex-col px-4 sm:px-8">
+    <div className="min-h-screen flex flex-col">
       <RouterProvider router={router} />
     </div>
   );
