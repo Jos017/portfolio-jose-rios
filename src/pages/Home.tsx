@@ -1,4 +1,6 @@
 import React from 'react';
+import { navItems } from '../common/const';
+import SideMenu from '../components/SideMenu';
 
 const Home = () => {
   return (
@@ -21,11 +23,14 @@ const Home = () => {
         <q className="text-quote text-light-3">
           The sky was cloudless and of a deep dark blue.
         </q>
-        <p className="text-capitalized uppercase text-light-3">
+        <p className="uppercase text-capitalized text-light-3">
           Brainstrom alternative ideas
         </p>
         <p className="text-small text-light-3">Value for your time</p>
         <p className="text-small text-light-3">Nothing is imposible</p>
+      </div>
+      <div>
+        <SideMenu items={navItems} position="left" />
       </div>
     </section>
   );
