@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 
-const HamButton = ({ color = 'primary' }: { color?: 'primary' }) => {
-  const [isOpen, setIsOpen] = useState(false);
+type BtnColors = 'primary';
+
+const HamButton = ({
+  color = 'primary',
+  onClick,
+}: {
+  color?: BtnColors;
+  onClick?: Function;
+}) => {
+  const [isClicked, setIsClicked] = useState(false);
   const btnColors = {
     primary: 'bg-primary-main',
   };
@@ -11,17 +19,20 @@ const HamButton = ({ color = 'primary' }: { color?: 'primary' }) => {
   const lineHover = 'opacity-50 group-hover:opacity-100';
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setIsClicked(!isClicked);
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (
     <button
-      className="flex flex-col h-12 w-12 justify-center items-center group"
+      className="flex flex-col items-center justify-center w-12 h-12 group"
       onClick={handleClick}
     >
-      <div className={`${hamLine} ${isOpen ? lineRotated : lineHover}`} />
-      <div className={`${hamLine} ${isOpen ? 'opacity-0' : lineHover}`} />
-      <div className={`${hamLine} ${isOpen ? lineReversed : lineHover}`} />
+      <div className={`${hamLine} ${isClicked ? lineRotated : lineHover}`} />
+      <div className={`${hamLine} ${isClicked ? 'opacity-0' : lineHover}`} />
+      <div className={`${hamLine} ${isClicked ? lineReversed : lineHover}`} />
     </button>
   );
 };

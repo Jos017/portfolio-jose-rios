@@ -11,7 +11,7 @@ const Home = () => {
       <h4>Heading 4</h4>
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
-      <div className="w-80">
+      <div className="max-w-lg">
         <p>
           Apparently we had reached a great height in the atmosphere, for the
           sky was a dead black, and the stars had ceased to twinkle.
@@ -30,7 +30,7 @@ const Home = () => {
         <p className="text-small text-light-3">Nothing is imposible</p>
       </div>
       <div>
-        <SideMenu items={navItems} position="left" />
+        <SideMenu items={navItems} />
       </div>
     </section>
   );

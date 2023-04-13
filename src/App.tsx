@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { navItems } from './common/const';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 
-type Sizes = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-
 const Layout = () => {
   return (
     <>
-      <Navbar maxWidth="xl" height="md" />
-      <main className="flex flex-grow max-w-screen-xl mx-auto w-full p-4 sm:p-8">
+      <Navbar items={navItems} maxWidth="xl" height="md" />
+      <main className="flex flex-grow w-full max-w-screen-xl p-4 mx-auto sm:p-8">
         <Outlet />
       </main>
       <Footer maxWidth="xl" height="md" />
@@ -32,7 +31,7 @@ const App = () => {
   ]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <RouterProvider router={router} />
     </div>
   );
