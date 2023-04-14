@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import HamButton from './HamButton';
-import SideMenu from './SideMenu';
+import NavMenu from './NavMenu';
 import { TNavItems } from '../common/const';
 
 type Props = { items: TNavItems[]; height: Sizes; maxWidth: Sizes };
@@ -21,7 +21,6 @@ const maxWidthVariants: { [key in Sizes]: string } = {
   xl: 'max-w-screen-xl',
   xxl: 'max-w-screen-2xl',
 };
-
 const offsetTopVariants: { [key in Sizes]: string } = {
   sm: 'absolute top-12',
   md: 'absolute top-16',
@@ -29,14 +28,13 @@ const offsetTopVariants: { [key in Sizes]: string } = {
   xl: 'absolute top-24',
   xxl: 'absolute top-26',
 };
-
-const hiddenVariants = {
-  true: 'inline-block',
-  false: 'hidden',
+const menuHeightVariants: { [key in Sizes]: string } = {
+  sm: 'h-[calc(100vh-3rem)]',
+  md: 'h-[calc(100vh-4rem)]',
+  lg: 'h-[calc(100vh-5rem)]',
+  xl: 'h-[calc(100vh-6rem)]',
+  xxl: 'h-[calc(100vh-7rem)]',
 };
-
-const bol = true;
-bol.toString();
 
 const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +43,9 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleCloseMenu = (e: Event) => {};
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
@@ -55,9 +55,9 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
         <div
           className={`${maxWidthVariants[maxWidth]} flex justify-between w-full h-full px-4 mx-auto sm:px-8`}
         >
-          <div className="flex items-center justify-center top w">
+          <a href="#" className="flex items-center justify-center">
             <img src={logo} className="object-contain h-3/4 object" />
-          </div>
+          </a>
           <ol className="items-center hidden gap-8 sm:flex">
             {items.map((item) => {
               return (
@@ -72,23 +72,23 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
               );
             })}
           </ol>
-          {/* <div className="flex items-center justify-center "> */}
           <div className="flex items-center justify-center sm:hidden">
-            <HamButton onClick={toggleMenu} />
+            <HamButton onClick={toggleMenu} open={isMenuOpen}/>
           </div>
         </div>
-      </nav>
-      {isMenuOpen && (
-        <div
-          className={`${offsetTopVariants[height]} absolute top-0 right-0 w-full`}
-        >
+        {isMenuOpen && (
           <div
-            className={`${maxWidthVariants[maxWidth]} flex justify-end w-full h-full px-4 mx-auto sm:px-8`}
+            className={`${offsetTopVariants[height]} ${menuHeightVariants[height]} right-0 w-full`}
           >
-            <SideMenu items={items} />
+            <div className="absolute w-full h-full opacity-50 bg-dark-0" onClick={handleCloseMenu} />
+            <div
+              className={`${maxWidthVariants[maxWidth]} flex justify-end w-full px-4 mx-auto sm:px-8`}
+            >
+              <NavMenu items={items} close={handleCloseMenu}/>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </nav>
     </>
   );
 };

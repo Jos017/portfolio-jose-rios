@@ -1,6 +1,4 @@
 import React from 'react';
-import { navItems } from '../common/const';
-import SideMenu from '../components/SideMenu';
 
 const Home = () => {
   return (
@@ -28,9 +26,6 @@ const Home = () => {
         </p>
         <p className="text-small text-light-3">Value for your time</p>
         <p className="text-small text-light-3">Nothing is imposible</p>
-      </div>
-      <div>
-        <SideMenu items={navItems} />
       </div>
     </section>
   );

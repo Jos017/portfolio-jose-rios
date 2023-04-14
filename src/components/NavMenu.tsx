@@ -1,9 +1,9 @@
 import React from 'react';
 import { TNavItems } from '../common/const';
 
-type Props = { items: TNavItems[] };
+type Props = { items: TNavItems[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
 
-const SideMenu = ({ items }: Props) => {
+const NavMenu = ({ items, close }: Props) => {
   return (
     <div
       className={
@@ -15,6 +15,7 @@ const SideMenu = ({ items }: Props) => {
           <a
             href={item.route}
             className="flex items-center justify-start h-12 px-4 capitalize rounded-lg gap-x-2 hover:bg-dark-2 hover:text-light-4"
+            onClick={close}
           >
             {item.icon}
             <p>{item.name}</p>
@@ -25,4 +26,4 @@ const SideMenu = ({ items }: Props) => {
   );
 };
 
-export default SideMenu;
+export default NavMenu;

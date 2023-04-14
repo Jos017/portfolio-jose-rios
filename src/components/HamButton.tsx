@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 type BtnColors = 'primary';
-
-const HamButton = ({
-  color = 'primary',
-  onClick,
-}: {
+type Props = {
   color?: BtnColors;
   onClick?: Function;
-}) => {
-  const [isClicked, setIsClicked] = useState(false);
+  open?: boolean;
+};
+
+const HamButton = ({ color = 'primary', onClick, open = false }: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
   const btnColors = {
     primary: 'bg-primary-main',
   };
@@ -19,20 +18,24 @@ const HamButton = ({
   const lineHover = 'opacity-50 group-hover:opacity-100';
 
   const handleClick = () => {
-    setIsClicked(!isClicked);
+    setIsOpen(!isOpen);
     if (onClick) {
       onClick();
     }
   };
+
+  useEffect(() => {
+    setIsOpen(open);
+  }, [open]);
 
   return (
     <button
       className="flex flex-col items-center justify-center w-12 h-12 group"
       onClick={handleClick}
     >
-      <div className={`${hamLine} ${isClicked ? lineRotated : lineHover}`} />
-      <div className={`${hamLine} ${isClicked ? 'opacity-0' : lineHover}`} />
-      <div className={`${hamLine} ${isClicked ? lineReversed : lineHover}`} />
+      <div className={`${hamLine} ${isOpen ? lineRotated : lineHover}`} />
+      <div className={`${hamLine} ${isOpen ? 'opacity-0' : lineHover}`} />
+      <div className={`${hamLine} ${isOpen ? lineReversed : lineHover}`} />
     </button>
   );
 };
