@@ -64,7 +64,7 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
                 <li key={item.name}>
                   <a
                     href={item.route}
-                    className="capitalize cursor-pointer text-heading-6 text-dark-3 hover:text-primary-main"
+                    className="capitalize cursor-pointer text-heading-6 hover:text-primary-main"
                   >
                     {item.name}
                   </a>
