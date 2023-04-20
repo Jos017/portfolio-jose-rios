@@ -2,39 +2,16 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import HamButton from './HamButton';
 import NavMenu from './NavMenu';
-import { TNavItems } from '../common/const';
+import { NavItems } from '../common/const';
+import {
+  heightVariants,
+  maxWidthVariants,
+  menuHeightVariants,
+  offsetTopVariants,
+  Sizes,
+} from '../common/stylesVariants';
 
-type Props = { items: TNavItems[]; height: Sizes; maxWidth: Sizes };
-type Sizes = 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-
-const heightVariants: { [key in Sizes]: string } = {
-  sm: 'h-12',
-  md: 'h-16',
-  lg: 'h-20',
-  xl: 'h-24',
-  xxl: 'h-26',
-};
-const maxWidthVariants: { [key in Sizes]: string } = {
-  sm: 'max-w-screen-sm',
-  md: 'max-w-screen-md',
-  lg: 'max-w-screen-lg',
-  xl: 'max-w-screen-xl',
-  xxl: 'max-w-screen-2xl',
-};
-const offsetTopVariants: { [key in Sizes]: string } = {
-  sm: 'absolute top-12',
-  md: 'absolute top-16',
-  lg: 'absolute top-20',
-  xl: 'absolute top-24',
-  xxl: 'absolute top-26',
-};
-const menuHeightVariants: { [key in Sizes]: string } = {
-  sm: 'h-[calc(100vh-3rem)]',
-  md: 'h-[calc(100vh-4rem)]',
-  lg: 'h-[calc(100vh-5rem)]',
-  xl: 'h-[calc(100vh-6rem)]',
-  xxl: 'h-[calc(100vh-7rem)]',
-};
+type Props = { items: NavItems[]; height: Sizes; maxWidth: Sizes };
 
 const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,18 +50,21 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
             })}
           </ol>
           <div className="flex items-center justify-center sm:hidden">
-            <HamButton onClick={toggleMenu} open={isMenuOpen}/>
+            <HamButton onClick={toggleMenu} open={isMenuOpen} />
           </div>
         </div>
         {isMenuOpen && (
           <div
             className={`${offsetTopVariants[height]} ${menuHeightVariants[height]} right-0 w-full`}
           >
-            <div className="absolute w-full h-full opacity-50 bg-dark-0" onClick={handleCloseMenu} />
+            <div
+              className="absolute w-full h-full opacity-50 bg-dark-0"
+              onClick={handleCloseMenu}
+            />
             <div
               className={`${maxWidthVariants[maxWidth]} flex justify-end w-full px-4 mx-auto sm:px-8`}
             >
-              <NavMenu items={items} close={handleCloseMenu}/>
+              <NavMenu items={items} close={handleCloseMenu} />
             </div>
           </div>
         )}

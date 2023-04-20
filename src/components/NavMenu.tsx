@@ -1,7 +1,7 @@
 import React from 'react';
-import { TNavItems } from '../common/const';
+import { NavItems } from '../common/const';
 
-type Props = { items: TNavItems[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
+type Props = { items: NavItems[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
 
 const NavMenu = ({ items, close }: Props) => {
   return (
