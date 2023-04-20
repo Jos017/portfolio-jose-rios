@@ -9,9 +9,7 @@ const Layout = () => {
   return (
     <>
       <Navbar items={navItems} maxWidth="xl" height="md" />
-      <main className="flex flex-grow w-full max-w-screen-xl p-4 mx-auto sm:p-8">
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer maxWidth="xl" height="md" />
     </>
   );
