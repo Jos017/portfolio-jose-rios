@@ -27,7 +27,7 @@ const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
   return (
     <>
       <nav
-        className={`${heightVariants[height]} flex items-center bg-dark-1 drop-shadow-dark-3`}
+        className={`${heightVariants[height]} flex items-center w-full bg-dark-1 drop-shadow-dark-3`}
       >
         <div
           className={`${maxWidthVariants[maxWidth]} flex justify-between w-full h-full px-4 mx-auto sm:px-8`}

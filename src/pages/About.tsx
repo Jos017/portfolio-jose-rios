@@ -1,18 +1,12 @@
 import React from 'react';
 import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
+import Page from '../components/Page';
 
-type Props = {
-  minH?: SizesRem;
-};
-
-const About = ({ minH = 'default' }: Props) => {
+const About = () => {
   return (
-    <section
-      id="about"
-      className={`${minSectionHeigthVariants[minH]} flex items-center w-full p-4 sm:p-8`}
-    >
+    <Page component="section" minH="full">
       <h2>About Me</h2>
-    </section>
+    </Page>
   );
 };
 

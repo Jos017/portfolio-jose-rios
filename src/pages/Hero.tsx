@@ -1,16 +1,10 @@
 import React from 'react';
 import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
+import Page from '../components/Page';
 
-type Props = {
-  minH?: SizesRem;
-};
-
-const Hero = ({ minH = 'default' }: Props) => {
+const Hero = () => {
   return (
-    <section
-      id="hero"
-      className={`${minSectionHeigthVariants[minH]} flex items-center w-full p-4 sm:p-8`}
-    >
+    <Page component="section" minH="4rem">
       <div className="flex flex-col items-start justify-center h-full max-w-3xl gap-y-4 sm:gap-y-8">
         <p className="text-primary-lighter">Hi, my name is</p>
         <div>
@@ -24,7 +18,7 @@ const Hero = ({ minH = 'default' }: Props) => {
           Electromechanical Engineering. I love playing videogames
         </p>
       </div>
-    </section>
+    </Page>
   );
 };
 

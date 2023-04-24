@@ -1,20 +1,21 @@
 import React from 'react';
 import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
+import Page from '../components/Page';
 import About from './About';
+import Contact from './Contact';
+import Experience from './Experience';
 import Hero from './Hero';
+import Projects from './Projects';
 
-type Props = {
-  minH?: SizesRem;
-};
-
-const Home = ({ minH = 'default' }: Props) => {
+const Home = () => {
   return (
-    <main
-      className={`${minSectionHeigthVariants[minH]} w-full max-w-screen-xl mx-auto`}
-    >
-      <Hero minH="4rem" />
-      <About minH="full" />
-    </main>
+    <Page component="main" className="w-full max-w-screen-xl mx-auto">
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </Page>
   );
 };
 
