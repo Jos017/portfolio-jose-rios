@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import HamButton from './HamButton';
 import NavMenu from './NavMenu';
-import { NavItems } from '../common/const';
+import { Links } from '../common/const';
 import {
   heightVariants,
   maxWidthVariants,
@@ -11,7 +11,7 @@ import {
   Sizes,
 } from '../common/stylesVariants';
 
-type Props = { items: NavItems[]; height: Sizes; maxWidth: Sizes };
+type Props = { items: Links[]; height: Sizes; maxWidth: Sizes };
 
 const Navbar = ({ items, height = 'md', maxWidth = 'lg' }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

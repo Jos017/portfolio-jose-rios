@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavItems } from '../common/const';
+import { Links } from '../common/const';
 
-type Props = { items: NavItems[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
+type Props = { items: Links[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
 
 const NavMenu = ({ items, close }: Props) => {
   return (
@@ -17,7 +17,7 @@ const NavMenu = ({ items, close }: Props) => {
             className="flex items-center justify-start h-12 px-4 capitalize rounded-lg gap-x-2 hover:bg-dark-2 hover:text-light-4"
             onClick={close}
           >
-            {item.icon}
+            {item.svg}
             <p>{item.name}</p>
           </a>
         );
