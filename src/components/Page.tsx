@@ -1,5 +1,5 @@
 import React from 'react';
-import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
+import { minSectionHeightVariants, SizesRem } from '../common/stylesVariants';
 
 type Props = {
   className?: string;
@@ -21,7 +21,7 @@ const Page = ({
   return (
     <Component
       id={id}
-      className={`${minSectionHeigthVariants[minH]} ${customClass}`}
+      className={`${minSectionHeightVariants[minH]} ${customClass}`}
     >
       {children}
     </Component>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Links } from '../common/const';
 
-type Props = { items: Links[]; close?: React.MouseEventHandler<HTMLAnchorElement> };
+type Props = {
+  items: Links[];
+  close?: React.MouseEventHandler<HTMLAnchorElement>;
+};
 
 const NavMenu = ({ items, close }: Props) => {
   return (
@@ -13,6 +16,7 @@ const NavMenu = ({ items, close }: Props) => {
       {items.map((item) => {
         return (
           <a
+            key={item.name}
             href={item.route}
             className="flex items-center justify-start h-12 px-4 capitalize rounded-lg gap-x-2 hover:bg-dark-2 hover:text-light-4"
             onClick={close}

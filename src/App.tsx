@@ -1,24 +1,11 @@
-import { useState } from 'react';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import { NAVIGATION } from './common/const';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
-
-const Layout = () => {
-  return (
-    <>
-      <Navbar items={NAVIGATION} maxWidth="xl" height="md" />
-      <Outlet />
-      <Footer maxWidth="xl" height="md" />
-    </>
-  );
-};
+import MainLayout from './layouts/MainLayout';
 
 const App = () => {
   const router = createBrowserRouter([
     {
-      element: <Layout />,
+      element: <MainLayout />,
       children: [
         {
           path: '/',

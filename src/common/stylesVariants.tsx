@@ -38,7 +38,7 @@ const menuHeightVariants: { [key in Sizes]: string } = {
   xl: 'h-[calc(100vh-6rem)]',
   xxl: 'h-[calc(100vh-7rem)]',
 };
-const minSectionHeigthVariants: { [key in SizesRem]: string } = {
+const minSectionHeightVariants: { [key in SizesRem]: string } = {
   default: 'min-h-fit',
   full: 'min-h-screen',
   '1rem': 'min-h-[calc(100vh-1rem)]',
@@ -67,6 +67,6 @@ export {
   heightVariants,
   maxWidthVariants,
   menuHeightVariants,
-  minSectionHeigthVariants,
+  minSectionHeightVariants,
   offsetTopVariants,
 };

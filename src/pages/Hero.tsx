@@ -1,5 +1,3 @@
-import React from 'react';
-import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
 import Page from '../components/Page';
 
 const Hero = () => {
@@ -15,7 +13,7 @@ const Hero = () => {
         </div>
         <p>
           I'm a Fullstack web developer, focused in Fronted side. I used to be
-          Electromechanical Engineering. I love playing videogames
+          Electromechanical Engineering. I love playing video games
         </p>
       </div>
     </Page>

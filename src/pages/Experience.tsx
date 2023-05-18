@@ -1,5 +1,3 @@
-import React from 'react';
-import { SizesRem } from '../common/stylesVariants';
 import Page from '../components/Page';
 
 const Experience = () => {

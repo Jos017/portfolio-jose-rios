@@ -1,4 +1,3 @@
-import React from 'react';
 import AcademicCap from '../assets/icons/AcademicCap';
 import Briefcase from '../assets/icons/Briefcase';
 import GitHub from '../assets/icons/GitHub';

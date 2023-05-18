@@ -1,5 +1,3 @@
-import React from 'react';
-import { minSectionHeigthVariants, SizesRem } from '../common/stylesVariants';
 import Page from '../components/Page';
 import About from './About';
 import Contact from './Contact';

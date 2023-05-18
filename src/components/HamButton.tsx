@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 type BtnColors = 'primary';
 type Props = {
   color?: BtnColors;
-  onClick?: Function;
+  onClick?: () => void;
   open?: boolean;
 };
 
