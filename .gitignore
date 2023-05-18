@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,node,react
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,node,react
 
+### Visual Studio Code ###
+.vscode
+
 ### Linux ###
 *~
 
