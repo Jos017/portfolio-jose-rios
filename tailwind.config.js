@@ -1,6 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+import { getPattern } from './src/utils/tailwindPatternsHandler';
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  plugins: [],
+  safelist: [
+    {
+      pattern: getPattern('max-w'),
+    },
+  ],
   theme: {
     extend: {
       colors: {
@@ -41,18 +49,12 @@ export default {
         ],
       },
       dropShadow: {
-        'dark-1':
-          '0px 1px 2px rgba(0, 0, 0, 0.32)',
-        'dark-2':
-          '0px 2px 4px rgba(0, 0, 0, 0.32)',
-        'dark-3':
-          '0px 4px 8px rgba(0, 0, 0, 0.32)',
-        'dark-4':
-          '0px 8px 16px rgba(0, 0, 0, 0.32)',
-        'dark-5':
-          '0px 16px 24px rgba(0, 0, 0, 0.32)',
-        'dark-6':
-          '0px 20px 32px rgba(0, 0, 0, 0.32)',
+        'dark-1': '0px 1px 2px rgba(0, 0, 0, 0.32)',
+        'dark-2': '0px 2px 4px rgba(0, 0, 0, 0.32)',
+        'dark-3': '0px 4px 8px rgba(0, 0, 0, 0.32)',
+        'dark-4': '0px 8px 16px rgba(0, 0, 0, 0.32)',
+        'dark-5': '0px 16px 24px rgba(0, 0, 0, 0.32)',
+        'dark-6': '0px 20px 32px rgba(0, 0, 0, 0.32)',
       },
       fontSize: {
         'heading-1': ['2.5rem', { lineHeight: '3.375rem', fontWeight: 700 }],
@@ -74,5 +76,4 @@ export default {
       },
     },
   },
-  plugins: [],
 };
