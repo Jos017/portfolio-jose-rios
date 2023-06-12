@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { NETWORKING } from '../common/const';
 import {
   heightVariants,
@@ -16,7 +17,9 @@ const Footer = ({ height = 'md', maxWidth = 'lg' }: Props) => {
         className={`${maxWidthVariants[maxWidth]} flex justify-between w-full h-full px-4 mx-auto sm:px-8`}
       >
         <div className="text-light-3">
-          {NETWORKING.map((network) => network.svg)}
+          {NETWORKING.map((network, index) => (
+            <Fragment key={index}>{network.svg}</Fragment>
+          ))}
         </div>
       </div>
     </footer>
