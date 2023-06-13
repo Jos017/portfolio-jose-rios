@@ -1,3 +1,23 @@
+type CSSOperators = '+' | '-' | '*' | '/';
+type CSSUnits =
+  | 'px'
+  | 'em'
+  | 'rem'
+  | 'vw'
+  | 'vh'
+  | 'vmin'
+  | 'vmax'
+  | '%'
+  | 'in'
+  | 'cm'
+  | 'mm'
+  | 'pt'
+  | 'pc'
+  | 'ex'
+  | 'ch';
+type CSSSize = `${number}${CSSUnits}`;
+type CSSCalc = `calc(${CSSSize}${CSSOperators}${CSSSize})`;
+
 type Height =
   | 0
   | 'px'
@@ -81,4 +101,11 @@ type MaxWidth =
   | 'screen-xl'
   | 'screen-2xl';
 
-export { type Height, type MaxWidth };
+export {
+  type CSSCalc,
+  type CSSOperators,
+  type CSSUnits,
+  type CSSSize,
+  type Height,
+  type MaxWidth,
+};
