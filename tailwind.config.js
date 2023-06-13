@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-import { getPattern } from './src/utils/tailwindPatternsHandler';
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   plugins: [],
   safelist: [
     {
-      pattern: getPattern('max-w'),
+      pattern: /max-w-.+/
     },
   ],
   theme: {
