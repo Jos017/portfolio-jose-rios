@@ -3,11 +3,6 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   plugins: [],
-  safelist: [
-    {
-      pattern: /max-w-.+/
-    },
-  ],
   theme: {
     extend: {
       colors: {
