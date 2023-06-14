@@ -7,7 +7,7 @@ import Projects from './Projects';
 const Home = () => {
   return (
     <main>
-      <Hero />
+      <Hero/>
       <About />
       <Experience />
       <Projects />

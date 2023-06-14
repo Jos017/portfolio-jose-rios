@@ -6,10 +6,10 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:react/jsx-runtime"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,10 +17,10 @@
     "sourceType": "module"
   },
   "plugins": [
-  "@typescript-eslint",
-  "react-hooks",
-  "react-refresh",
-  "react"
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "react-refresh"
   ],
   "rules": {
     "react/no-unescaped-entities": "off"
