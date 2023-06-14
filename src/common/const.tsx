@@ -5,8 +5,7 @@ import LinkedIn from '../assets/icons/LinkedIn';
 import Newspaper from '../assets/icons/Newspaper';
 import Phone from '../assets/icons/Phone';
 import User from '../assets/icons/User';
-
-type Links = { name: string; route: string; svg?: JSX.Element };
+import { Links } from './types';
 
 const NAVIGATION: Links[] = [
   { name: 'about', route: '/#about', svg: <User /> },
