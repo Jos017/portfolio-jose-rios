@@ -8,7 +8,7 @@ type Props = {
   id?: string;
 };
 
-const Page = ({ children, className = '', component = 'div', id }: Props) => {
+const Page = ({ children, className, component = 'div', id }: Props) => {
   const Component = component;
 
   const defaultClasses =
