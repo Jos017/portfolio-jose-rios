@@ -1,10 +1,8 @@
-import Page from '../components/Page';
-
 const Experience = () => {
   return (
-    <Page component="section">
+    <section className="flex flex-col justify-center w-full mx-auto p-4">
       <h2>Experiencia</h2>
-    </Page>
+    </section>
   );
 };
 

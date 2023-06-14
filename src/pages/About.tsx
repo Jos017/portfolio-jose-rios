@@ -1,9 +1,8 @@
 import profilePic from '../assets/images/profilePic.jpg';
-import Page from '../components/Page';
 
 const About = () => {
   return (
-    <Page component="section">
+    <section className="flex flex-col justify-center w-full mx-auto p-4">
       <div className="flex flex-col gap-8">
         <h2>About Me</h2>
         <div className="flex items-center">
@@ -36,7 +35,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </Page>
+    </section>
   );
 };
 

@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 const MainLayout = () => {
   return (
     <>
-      <Navbar items={NAVIGATION} maxWidth="xl" height="md" />
+      <Navbar items={NAVIGATION}/>
       <Outlet />
-      <Footer maxWidth="xl" height="md" />
+      <Footer/>
     </>
   );
 };

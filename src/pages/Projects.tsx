@@ -1,10 +1,8 @@
-import Page from '../components/Page';
-
 const Projects = () => {
   return (
-    <Page component="section" minH="full">
+    <section className="flex flex-col justify-center w-full mx-auto p-4">
       <h2>My Projects</h2>
-    </Page>
+    </section>
   );
 };
 

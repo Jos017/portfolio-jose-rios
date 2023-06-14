@@ -1,10 +1,8 @@
-import Page from '../components/Page';
-
 const Contact = () => {
   return (
-    <Page component="section">
+    <section className="flex flex-col justify-center w-full mx-auto p-4">
       <h2>Get In Touch</h2>
-    </Page>
+    </section>
   );
 };
 
