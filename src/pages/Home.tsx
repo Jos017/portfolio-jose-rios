@@ -7,7 +7,7 @@ import Projects from './Projects';
 
 const Home = () => {
   return (
-    <Page component="main" maxWidth="screen-xl" className="w-full mx-auto">
+    <Page component="main"className="max-screen-xl">
       <Hero />
       <About />
       <Experience />

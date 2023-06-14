@@ -3,7 +3,7 @@ import Page from '../components/Page';
 
 const About = () => {
   return (
-    <Page component="section" minH="full" maxWidth='screen-lg'>
+    <Page component="section">
       <div className="flex flex-col gap-8">
         <h2>About Me</h2>
         <div className="flex items-center">
