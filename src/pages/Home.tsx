@@ -6,8 +6,8 @@ import Projects from './Projects';
 
 const Home = () => {
   return (
-    <main>
-      <Hero/>
+    <main className="mx-auto max-w-screen-lg px-4 sm:px-8">
+      <Hero />
       <About />
       <Experience />
       <Projects />

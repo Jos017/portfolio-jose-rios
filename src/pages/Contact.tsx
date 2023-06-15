@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="flex flex-col justify-center w-full mx-auto p-4">
+    <section className="mx-auto flex min-h-[calc(100vh-4rem)] w-full flex-col justify-center">
       <h2>Get In Touch</h2>
     </section>
   );

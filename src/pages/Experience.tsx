@@ -1,6 +1,6 @@
 const Experience = () => {
   return (
-    <section className="flex flex-col justify-center w-full mx-auto p-4">
+    <section className="mx-auto flex min-h-screen w-full flex-col justify-center">
       <h2>Experiencia</h2>
     </section>
   );

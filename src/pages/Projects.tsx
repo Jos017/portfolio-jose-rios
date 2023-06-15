@@ -1,6 +1,6 @@
 const Projects = () => {
   return (
-    <section className="flex flex-col justify-center w-full mx-auto p-4">
+    <section className="mx-auto flex min-h-screen w-full flex-col justify-center">
       <h2>My Projects</h2>
     </section>
   );
