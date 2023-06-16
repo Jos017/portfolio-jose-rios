@@ -5,8 +5,8 @@ const About = () => {
     <section className="mx-auto flex min-h-screen w-full flex-col justify-center">
       <div className="flex flex-col gap-8">
         <h2>About Me</h2>
-        <div className="flex items-center">
-          <div className="flex flex-col gap-4">
+        <div className="flex h-full w-full flex-wrap justify-center gap-8">
+          <div className="flex max-w-xl flex-col gap-8">
             <p>
               I'm a Full-stack Web Developer focused in the fronted side,
               JavaScript programmer, self-taught, good at working with groups, I
@@ -30,8 +30,12 @@ const About = () => {
               jrbernabe@gmail.com. I look forward to speaking with you!
             </p>
           </div>
-          <div>
-            <img src={profilePic} alt="Profile picture" />
+          <div className="max-w-xs h-fit rounded-lg overflow-hidden">
+            <img
+              className="h-full w-full object-contain object-top"
+              src={profilePic}
+              alt="Profile picture"
+            />
           </div>
         </div>
       </div>
