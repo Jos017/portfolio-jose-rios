@@ -2,9 +2,9 @@ import { useState } from 'react';
 import logo from '../assets/logo.svg';
 import HamButton from './HamButton';
 import NavMenu from './NavMenu';
-import { Links } from '../common/types';
+import { Link } from '../common/types';
 
-type Props = { items: Links[] };
+type Props = { items: Link[] };
 
 const Navbar = ({ items }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

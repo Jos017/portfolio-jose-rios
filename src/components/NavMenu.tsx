@@ -1,8 +1,8 @@
 import React from 'react';
-import { Links } from '../common/const';
+import { Link } from '../common/types';
 
 type Props = {
-  items: Links[];
+  items: Link[];
   close?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
@@ -10,7 +10,7 @@ const NavMenu = ({ items, close }: Props) => {
   return (
     <div
       className={
-        'inline-block w-full sm:w-80 p-4 rounded-b-lg h-fit bg-dark-elevation-3 drop-shadow-dark-3'
+        'inline-block h-fit w-full rounded-b-lg bg-dark-elevation-3 p-4 drop-shadow-dark-3 sm:w-80'
       }
     >
       {items.map((item) => {
@@ -18,7 +18,7 @@ const NavMenu = ({ items, close }: Props) => {
           <a
             key={item.name}
             href={item.route}
-            className="flex items-center justify-start h-12 px-4 capitalize rounded-lg gap-x-2 hover:bg-dark-2 hover:text-light-4"
+            className="flex h-12 items-center justify-start gap-x-2 rounded-lg px-4 capitalize hover:bg-dark-2 hover:text-light-4"
             onClick={close}
           >
             {item.svg}
