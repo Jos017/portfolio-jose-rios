@@ -6,7 +6,7 @@ const About = () => {
       <div className="flex flex-col gap-8">
         <h2>About Me</h2>
         <div className="flex h-full w-full flex-wrap justify-center gap-8">
-          <div className="flex max-w-xl flex-col gap-8">
+          <div className="flex max-w-xl flex-col gap-6">
             <p>
               I'm a Full-stack Web Developer focused in the fronted side,
               JavaScript programmer, self-taught, good at working with groups, I
@@ -14,15 +14,30 @@ const About = () => {
               design. I also like reading a lot and watch movies. Always looking
               for something new to learn.
             </p>
+            <div className="flex flex-col gap-2">
+              <p>I have experience working with:</p>
+              <ul className="ps-6 list-disc columns-2 sm:columns-3">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>NodeJs</li>
+                <li>ExpressJs</li>
+                <li>MongoDB</li>
+                <li>Git</li>
+                <li>Material UI</li>
+                <li>Bootstrap</li>
+                <li>Bootstrap</li>
+                <li>Tailwind</li>
+                <li>HTML & CSS</li>
+              </ul>
+            </div>
             <p>
-              I have experience working with: JavaScript, TypeScript, React,
-              NodeJs, ExpressJs, MongoDB, Git, Material-UI, Bootstrap, Tailwind,
-              HTML & CSS I used to work for about 4 years as a Electromechanical
-              Engineer but realized that was not the path I liked for the rest
-              of my life, so I introduced myself to the world of programming and
-              begin studying for about 1 year and discover it was the best
-              choice I have done. Now I feel good and love programming and want
-              to learn a lot more.
+              I used to work for about 4 years as a Electromechanical Engineer
+              but realized that was not the path I liked for the rest of my
+              life, so I introduced myself to the world of programming and begin
+              studying for about 1 year and discover it was the best choice I
+              have done. Now I feel good and love programming and want to learn
+              a lot more.
             </p>
             <p>
               If you have any questions that I can help with, please feel free
@@ -30,7 +45,7 @@ const About = () => {
               jrbernabe@gmail.com. I look forward to speaking with you!
             </p>
           </div>
-          <div className="max-w-xs h-fit rounded-lg overflow-hidden">
+          <div className="h-fit max-w-xs overflow-hidden rounded-lg">
             <img
               className="h-full w-full object-contain object-top"
               src={profilePic}
