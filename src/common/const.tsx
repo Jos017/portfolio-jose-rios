@@ -1,3 +1,6 @@
+import pet911Img from '../assets/images/projects/pet911.jpg';
+import puzzleBubbleImg from '../assets/images/projects/puzzleBubble.jpg';
+import torakaTVImg from '../assets/images/projects/torakaTV.jpg';
 import AcademicCap from '../assets/icons/AcademicCap';
 import Briefcase from '../assets/icons/Briefcase';
 import GitHub from '../assets/icons/GitHub';
@@ -5,7 +8,7 @@ import LinkedIn from '../assets/icons/LinkedIn';
 import Newspaper from '../assets/icons/Newspaper';
 import Phone from '../assets/icons/Phone';
 import User from '../assets/icons/User';
-import { Link, WorkExperience } from './types';
+import { Link, Project, WorkExperience } from './types';
 
 const NAVIGATION: Link[] = [
   { name: 'about', route: '/#about', svg: <User /> },
@@ -29,6 +32,46 @@ const NETWORKING: Link[] = [
   {
     name: 'jrbernabe@gmail.com',
     route: 'mailto:jrbernabe@gmail.com',
+  },
+];
+
+const PROJECTS: Project[] = [
+  {
+    title: 'TorakaTV',
+    subtitle: 'Featured Project',
+    description: 'Single Page Application, Movie and Series Tracker',
+    techUsed: [
+      'React',
+      'JavaScript',
+      'ExpressJs',
+      'NodeJs',
+      'MaterialUI',
+      'Axios',
+    ],
+    imgUrl: torakaTVImg,
+    gitHubMainUrl: 'https://github.com/Jos017/TorakaTV-Client',
+    gitHubSecondaryUrl: 'https://github.com/Jos017/TorakaTV-Server',
+    deployUrl: 'https://toraka-tv.vercel.app',
+  },
+  {
+    title: 'Pet 911',
+    subtitle: 'Featured Project',
+    description:
+      'Web App for posting lost and found pets, all was rendered in the Server Side.',
+    techUsed: ['ExpressJs', 'NodeJs', 'Handlebars', 'MongoDB', 'Bootstrap'],
+    imgUrl: pet911Img,
+    gitHubMainUrl: 'https://github.com/Jos017/pet911',
+    deployUrl: 'https://pet911.onrender.com/',
+  },
+  {
+    title: 'Puzzle Bubble',
+    subtitle: 'Featured Project',
+    description:
+      'Tile matching puzzle game, based on Puzzle Bobble game for Arcade',
+    techUsed: ['JavaScript', 'CSS', 'HTML'],
+    imgUrl: puzzleBubbleImg,
+    gitHubMainUrl: 'https://github.com/Jos017/puzzle-bubble',
+    deployUrl: 'https://jos017.github.io/puzzle-bubble',
   },
 ];
 
@@ -80,4 +123,4 @@ const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ];
 
-export { NAVIGATION, NETWORKING, WORK_EXPERIENCE };
+export { NAVIGATION, NETWORKING, PROJECTS, WORK_EXPERIENCE };

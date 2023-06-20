@@ -4,9 +4,10 @@ type Project = {
   title: string;
   subtitle: string;
   description: string;
-  techUsed: string;
+  techUsed: string[];
   imgUrl: string;
-  gitHubUrl: string;
+  gitHubMainUrl: string;
+  gitHubSecondaryUrl?: string;
   deployUrl?: string;
 };
 
