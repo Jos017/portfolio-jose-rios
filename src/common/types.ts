@@ -1,4 +1,15 @@
 type Link = { name: string; route: string; svg?: JSX.Element };
+
+type Project = {
+  title: string;
+  subtitle: string;
+  description: string;
+  techUsed: string;
+  imgUrl: string;
+  gitHubUrl: string;
+  deployUrl?: string;
+};
+
 type WorkExperience = {
   jobTitle: string;
   companyName: string;
@@ -8,4 +19,4 @@ type WorkExperience = {
   webURL?: string;
 };
 
-export { type Link, type WorkExperience };
+export { type Link, type Project, type WorkExperience };
