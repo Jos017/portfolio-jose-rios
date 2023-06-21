@@ -16,7 +16,7 @@ const About = () => {
             </p>
             <div className="flex flex-col gap-2">
               <p>I have experience working with:</p>
-              <ul className="ps-6 list-disc columns-2 sm:columns-3">
+              <ul className="list-disc columns-2 ps-6 sm:columns-3">
                 <li>JavaScript</li>
                 <li>TypeScript</li>
                 <li>React</li>
@@ -38,11 +38,6 @@ const About = () => {
               studying for about 1 year and discover it was the best choice I
               have done. Now I feel good and love programming and want to learn
               a lot more.
-            </p>
-            <p>
-              If you have any questions that I can help with, please feel free
-              to reach out here on LinkedIn or contact me directly at
-              jrbernabe@gmail.com. I look forward to speaking with you!
             </p>
           </div>
           <div className="h-fit max-w-xs overflow-hidden rounded-lg">
