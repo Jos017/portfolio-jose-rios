@@ -18,9 +18,9 @@ const Navbar = ({ items }: Props) => {
   };
 
   return (
-    <nav className="flex h-16 w-full items-center">
+    <nav className="fixed flex h-16 w-full items-center bg-dark-0">
       <div className="mx-auto flex h-full w-full max-w-screen-lg justify-between px-4 sm:px-8">
-        <a href="#" className="flex items-center justify-center">
+        <a href="#hero" className="flex items-center justify-center">
           <img src={logo} className="object h-3/4 object-contain" />
         </a>
         <ol className="hidden items-center gap-8 sm:flex">

@@ -7,7 +7,10 @@ const Experience = () => {
   const [jobIndex, setJobIndex] = useState(0);
 
   return (
-    <section className="mx-auto flex w-full flex-col gap-8 py-32">
+    <section
+      id="experience"
+      className="mx-auto flex w-full flex-col gap-8 py-32"
+    >
       <h2>Work Experience</h2>
       <div className="flex justify-between gap-8">
         <ExpMenu

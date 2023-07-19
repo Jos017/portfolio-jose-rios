@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 
 const Projects = () => {
   return (
-    <section className="mx-auto flex w-full flex-col gap-8 py-32">
+    <section id="projects" className="mx-auto flex w-full flex-col gap-8 py-32">
       <h2>My Projects</h2>
       <div className="flex flex-col gap-16">
         {PROJECTS.map((project, index) => (

@@ -13,7 +13,7 @@ import { Link, Project, WorkExperience } from './types';
 const NAVIGATION: Link[] = [
   { name: 'about', route: '/#about', svg: <User /> },
   { name: 'experience', route: '/#experience', svg: <AcademicCap /> },
-  { name: 'work', route: '/#work', svg: <Briefcase /> },
+  { name: 'projects', route: '/#projects', svg: <Briefcase /> },
   { name: 'contact', route: '/#contact', svg: <Phone /> },
   { name: 'resume', route: '/#resume', svg: <Newspaper /> },
 ];

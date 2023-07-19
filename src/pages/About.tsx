@@ -2,7 +2,10 @@ import profilePic from '../assets/images/profilePic.jpg';
 
 const About = () => {
   return (
-    <section className="mx-auto flex min-h-screen w-full flex-col justify-center">
+    <section
+      id="about"
+      className="mx-auto flex min-h-screen w-full flex-col justify-center"
+    >
       <div className="flex flex-col gap-8">
         <h2>About Me</h2>
         <div className="flex h-full w-full flex-wrap justify-center gap-8">

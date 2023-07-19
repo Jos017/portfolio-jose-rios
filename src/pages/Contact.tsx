@@ -10,7 +10,10 @@ const Contact = () => {
   );
 
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-4rem)] w-full flex-col justify-center gap-6 text-center">
+    <section
+      id="contact"
+      className="mx-auto flex min-h-[calc(100vh-4rem)] w-full flex-col justify-center gap-6 text-center"
+    >
       <h2>Get In Touch</h2>
       <p className="mx-auto max-w-lg">
         If you have any questions that I can help with, please feel free to
