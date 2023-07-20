@@ -18,6 +18,8 @@ const NavMenu = ({ items, close }: Props) => {
           <a
             key={item.name}
             href={item.route}
+            rel="noreferrer"
+            target={item.name === 'resume' ? '_blank' : '_self'}
             className="flex h-12 items-center justify-start gap-x-2 rounded-lg px-4 capitalize hover:bg-dark-2 hover:text-light-4"
             onClick={close}
           >

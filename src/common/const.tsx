@@ -8,14 +8,14 @@ import LinkedIn from '../assets/icons/LinkedIn';
 import Newspaper from '../assets/icons/Newspaper';
 import Phone from '../assets/icons/Phone';
 import User from '../assets/icons/User';
-import { Link, Project, WorkExperience } from './types';
+import { Education, Language, Link, Project, WorkExperience } from './types';
 
 const NAVIGATION: Link[] = [
   { name: 'about', route: '/#about', svg: <User /> },
   { name: 'experience', route: '/#experience', svg: <AcademicCap /> },
   { name: 'projects', route: '/#projects', svg: <Briefcase /> },
   { name: 'contact', route: '/#contact', svg: <Phone /> },
-  { name: 'resume', route: '/#resume', svg: <Newspaper /> },
+  { name: 'resume', route: '/resume', svg: <Newspaper /> },
 ];
 
 const NETWORKING: Link[] = [
@@ -35,6 +35,36 @@ const NETWORKING: Link[] = [
   },
 ];
 
+// Resume Info
+const EDUCATION: Education[] = [
+  {
+    school: 'Ironhack',
+    studyField: 'Full Stack Web Development',
+    startDate: new Date(2022, 7),
+    endDate: new Date(2022, 9),
+    location: { country: 'Mexico', locale: 'MX' },
+    description: [
+      '9 Week intensive web development Bootcamp, Remote',
+      'Built front end projects using HTML, CSS, and JavaScript.',
+      'Built full stack projects using ExpressJs, NodeJs, Handlebars, MongoDB, and Axios.',
+      'Built a single page application using ReactJs.',
+    ],
+  },
+  {
+    school: 'Universidad Privada Boliviana',
+    studyField: 'Electromechanical Engineering',
+    startDate: new Date(2012, 1),
+    endDate: new Date(2017, 11),
+    location: { country: 'Bolivia' },
+  },
+];
+
+const LANGUAGES: Language[] = [
+  { language: 'Spanish', level: 'Native' },
+  { language: 'English', level: 'B2' },
+  { language: 'Japanese', level: 'N5' },
+];
+
 const PROJECTS: Project[] = [
   {
     title: 'TorakaTV',
@@ -52,6 +82,7 @@ const PROJECTS: Project[] = [
     gitHubMainUrl: 'https://github.com/Jos017/TorakaTV-Client',
     gitHubSecondaryUrl: 'https://github.com/Jos017/TorakaTV-Server',
     deployUrl: 'https://toraka-tv.vercel.app',
+    date: new Date(2022, 9),
   },
   {
     title: 'Pet 911',
@@ -62,6 +93,7 @@ const PROJECTS: Project[] = [
     imgUrl: pet911Img,
     gitHubMainUrl: 'https://github.com/Jos017/pet911',
     deployUrl: 'https://pet911.onrender.com/',
+    date: new Date(2022, 8),
   },
   {
     title: 'Puzzle Bubble',
@@ -72,13 +104,32 @@ const PROJECTS: Project[] = [
     imgUrl: puzzleBubbleImg,
     gitHubMainUrl: 'https://github.com/Jos017/puzzle-bubble',
     deployUrl: 'https://jos017.github.io/puzzle-bubble',
+    date: new Date(2022, 7),
   },
+];
+
+const SKILLS: string[] = [
+  'TypeScript',
+  'JavaScript',
+  'HTML',
+  'CSS',
+  'React',
+  'Git',
+  'NodeJs',
+  'MongoDB',
+  'REST APIs',
+  'Unit Testing',
+  'SQL',
+  'Figma',
+  'Material-UI',
+  'SolidWorks',
+  'AutoCad',
 ];
 
 const WORK_EXPERIENCE: WorkExperience[] = [
   {
     jobTitle: 'Freelance Frontend Developer',
-    companyName: 'Ministry of Defense (Bolivia)',
+    companyName: 'Ministerio de Defensa',
     startDate: new Date(2023, 4),
     endDate: 'present',
     workDone: [
@@ -92,6 +143,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
       'Maintained clear and concise documentation, including technical specifications and user guides, to facilitate seamless project handovers and client onboarding processes.',
       'Technologies Used: JavaScript, React, HTML, CSS, MaterialUI, Token Authentication, RESTful APIs, Git',
     ],
+    location: { country: 'Bolivia', city: 'La Paz' },
   },
   {
     jobTitle: 'Freelance Frontend Developer',
@@ -107,6 +159,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
       'Technologies Used: TypeScript, React, HTML, CSS, MaterialUI, Jest.',
       'Project Snapshot: (https://main.d1vnfpl0hcfayv.amplifyapp.com/)',
     ],
+    location: { country: 'Bolivia', city: 'La Paz' },
   },
   {
     jobTitle: 'Electromechanical Maintenance Engineer',
@@ -120,7 +173,16 @@ const WORK_EXPERIENCE: WorkExperience[] = [
       'Utilized programming skills to configure Programmable Logic Controllers (PLCs) and successfully implemented a SCADA system, reducing maintenance time by one day and streamlining operational processes.',
       'Implemented projects using the World Class Manufacturing (WCM) methodology, specifically implementing it in a Pneumatic Conveying System. This initiative resulted in a 5% reduction in production costs, improving overall operational efficiency.',
     ],
+    location: { country: 'Bolivia', city: 'Cochabamba' },
   },
 ];
 
-export { NAVIGATION, NETWORKING, PROJECTS, WORK_EXPERIENCE };
+export {
+  EDUCATION,
+  LANGUAGES,
+  NAVIGATION,
+  NETWORKING,
+  PROJECTS,
+  SKILLS,
+  WORK_EXPERIENCE,
+};

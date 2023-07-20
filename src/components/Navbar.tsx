@@ -29,6 +29,8 @@ const Navbar = ({ items }: Props) => {
               <li key={item.name}>
                 <a
                   href={item.route}
+                  rel="noreferrer"
+                  target={item.name === 'resume' ? '_blank' : '_self'}
                   className="cursor-pointer text-heading-6 capitalize hover:text-primary-main"
                 >
                   {item.name}

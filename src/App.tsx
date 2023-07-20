@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import MainLayout from './layouts/MainLayout';
+import Resume from './pages/Resume';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -13,10 +14,14 @@ const App = () => {
         },
       ],
     },
+    {
+      path: '/resume',
+      element: <Resume />,
+    },
   ]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <RouterProvider router={router} />
     </div>
   );
