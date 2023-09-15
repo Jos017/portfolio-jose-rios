@@ -1,4 +1,5 @@
 import pet911Img from '../assets/images/projects/pet911.jpg';
+import portfolioImg from '../assets/images/projects/portfolio.jpg';
 import puzzleBubbleImg from '../assets/images/projects/puzzleBubble.jpg';
 import torakaTVImg from '../assets/images/projects/torakaTV.jpg';
 import AcademicCap from '../assets/icons/AcademicCap';
@@ -21,7 +22,7 @@ const NAVIGATION: Link[] = [
 const NETWORKING: Link[] = [
   {
     name: 'LinkedIn',
-    route: 'https://www.linkedin.com/in/jos017/',
+    route: 'https://linkedin.com/in/jos017/',
     svg: <LinkedIn />,
   },
   {
@@ -33,6 +34,10 @@ const NETWORKING: Link[] = [
     name: 'jrbernabe@gmail.com',
     route: 'mailto:jrbernabe@gmail.com',
   },
+  {
+    name: 'Portfolio',
+    route: 'joseriosdev.vercel.app',
+  }
 ];
 
 // Resume Info
@@ -67,6 +72,16 @@ const LANGUAGES: Language[] = [
 
 const PROJECTS: Project[] = [
   {
+    title: 'Portfolio',
+    subtitle: 'Featured Project',
+    description: 'My Portfolio - Jose Rios',
+    techUsed: ['React', 'TypeScript', 'MaterialUI', 'Jest'],
+    imgUrl: portfolioImg,
+    gitHubMainUrl: 'https://github.com/Jos017/portfolio-jose-rios',
+    deployUrl: 'https://joseriosdev.vercel.app/',
+    date: new Date(2023, 6),
+  },
+  {
     title: 'TorakaTV',
     subtitle: 'Featured Project',
     description: 'Single Page Application, Movie and Series Tracker',
@@ -75,7 +90,7 @@ const PROJECTS: Project[] = [
       'JavaScript',
       'ExpressJs',
       'NodeJs',
-      'MaterialUI',
+      'Tailwind',
       'Axios',
     ],
     imgUrl: torakaTVImg,
