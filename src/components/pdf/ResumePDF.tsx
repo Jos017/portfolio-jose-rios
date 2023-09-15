@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import {
   Document,
   Font,
+  Link,
   Page,
   StyleSheet,
   Text,
@@ -12,6 +13,7 @@ import {
 import {
   EDUCATION,
   LANGUAGES,
+  NETWORKING,
   PROJECTS,
   SKILLS,
   WORK_EXPERIENCE,
@@ -83,6 +85,11 @@ const styles = StyleSheet.create({
   },
   header: {
     textAlign: 'center',
+  },
+  networking: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   sectionTitle: {
     borderBottom: '1.5pt solid #000',
@@ -175,10 +182,19 @@ const ResumePDF = () => {
           <View style={[styles.header]}>
             <Text style={[styles.title1]}>Jose Bernabe Rios Nuñez</Text>
             <Text style={[styles.bold]}>Full Stack Web Developer</Text>
-            <Text>
-              Bolivia | jrbernabe@gmail.com | linkedin.com/in/jos017 |
-              github.com/Jos017
-            </Text>
+            <View style={[styles.networking]}>
+              <Text>Bolivia</Text>
+              {NETWORKING.map((network, index) => (
+                <View key={`net-${index}`} style={[styles.networking]}>
+                  <Text> | </Text>
+                  <Link src={network.route}>
+                    {network.type === 'web'
+                      ? network.route.replace('https://', '')
+                      : network.name}
+                  </Link>
+                </View>
+              ))}
+            </View>
           </View>
           <View>
             <Text>
@@ -280,7 +296,7 @@ const ResumePDF = () => {
                   <View style={[styles.subsectionTitle]}>
                     <View style={styles.subsectionProject}>
                       <Text style={[styles.title3]}>{project.title} </Text>
-                      <Text>({project.deployUrl})</Text>
+                      <Link src={project.deployUrl}>({project.deployUrl})</Link>
                     </View>
                     <View style={[styles.subsectionLocation]}>
                       <Text>{dayjs(project.date).format('MMM YYYY')}</Text>
@@ -297,21 +313,23 @@ const ResumePDF = () => {
                     </View>
                     <View style={[styles.listItem]}>
                       <Text>•</Text>
-                      <Text>{project.description}</Text>
-                    </View>
-                    <View style={[styles.listItem]}>
-                      <Text>•</Text>
                       <Text>
                         {project.gitHubSecondaryUrl
-                          ? `GitHub - Client: (${project.gitHubMainUrl})`
-                          : `GitHub: (${project.gitHubMainUrl})`}
+                          ? 'GitHub - Client: '
+                          : 'GitHub: '}{' '}
+                        <Link src={project.gitHubMainUrl}>
+                          {project.gitHubMainUrl}
+                        </Link>
                       </Text>
                     </View>
                     {project.gitHubSecondaryUrl && (
                       <View style={[styles.listItem]}>
                         <Text>•</Text>
                         <Text>
-                          GitHub - Server: ({project.gitHubSecondaryUrl})
+                          {'GitHub - Server: '}
+                          <Link src={project.gitHubSecondaryUrl}>
+                            {project.gitHubSecondaryUrl}
+                          </Link>
                         </Text>
                       </View>
                     )}

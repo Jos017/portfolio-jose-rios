@@ -1,4 +1,9 @@
-type Link = { name: string; route: string; svg?: JSX.Element };
+type Link = {
+  name: string;
+  route: string;
+  type?: 'web' | 'email';
+  svg?: JSX.Element;
+};
 
 type Education = {
   school: string;
@@ -22,7 +27,7 @@ type Project = {
   imgUrl: string;
   gitHubMainUrl: string;
   gitHubSecondaryUrl?: string;
-  deployUrl?: string;
+  deployUrl: string;
   date: Date;
 };
 

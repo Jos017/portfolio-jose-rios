@@ -19,24 +19,28 @@ const NAVIGATION: Link[] = [
   { name: 'resume', route: '/resume', svg: <Newspaper /> },
 ];
 
-const NETWORKING: Link[] = [
+const NETWORKING: Link[]  = [
   {
+    type: 'web',
     name: 'LinkedIn',
-    route: 'https://linkedin.com/in/jos017/',
+    route: 'https://linkedin.com/in/jos017',
     svg: <LinkedIn />,
   },
   {
+    type: 'web',
     name: 'GitHub',
     route: 'https://github.com/Jos017',
     svg: <GitHub />,
   },
   {
+    type: 'email',
     name: 'jrbernabe@gmail.com',
     route: 'mailto:jrbernabe@gmail.com',
   },
   {
+    type: 'web',
     name: 'Portfolio',
-    route: 'joseriosdev.vercel.app',
+    route: 'https://joseriosdev.vercel.app',
   }
 ];
 
