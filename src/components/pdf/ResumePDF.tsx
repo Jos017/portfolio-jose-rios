@@ -16,6 +16,8 @@ import {
   SKILLS,
   WORK_EXPERIENCE,
 } from '../../common/const';
+import { joinValuesToString } from '../../utils/objectUtils';
+import { Language } from '../../common/types';
 
 // Fonts
 Font.register({
@@ -34,6 +36,13 @@ Font.register({
   ],
 });
 
+const margins = {
+  top: '1.33cm',
+  bottom: '1.33cm',
+  left: '1.33cm',
+  right: '1.33cm',
+};
+
 // Styles
 const styles = StyleSheet.create({
   page: {
@@ -42,13 +51,16 @@ const styles = StyleSheet.create({
     fontSize: '10.5pt',
     fontFamily: 'Garamond',
     fontWeight: 'normal',
+    paddingTop: margins.top,
+    paddingLeft: margins.left,
+    paddingRight: margins.right,
+    paddingBottom: margins.bottom,
   },
   content: {
     display: 'flex',
     flexDirection: 'column',
     gap: '10pt',
-    marginHorizontal: '1.52cm',
-    marginVertical: '1.33cm',
+    width: '10cm',
     flexGrow: 1,
   },
   title1: {
@@ -96,18 +108,66 @@ const styles = StyleSheet.create({
     gap: '10pt',
   },
   list: {
-    paddingLeft: '8pt',
-    width: '96%',
+    width: '94%',
+  },
+  listColumn: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   listItem: {
+    marginLeft: '8pt',
     display: 'flex',
     flexDirection: 'row',
     gap: '8pt',
   },
 });
 
+const ListWithColumns = ({
+  items,
+  itemsPerCol,
+}: {
+  items: string[];
+  itemsPerCol?: number;
+}) => {
+  const getColumnsItems = (items: string[], itemsPerCol = 5): string[][] => {
+    let currentColumn = 0;
+    const itemColumns = [];
+    const totalItems = items.length;
+    const columns = Math.ceil(totalItems / itemsPerCol);
+
+    for (let i = 0; i < columns; i++) {
+      itemColumns.push(items.slice(currentColumn, currentColumn + itemsPerCol));
+      currentColumn += itemsPerCol;
+    }
+
+    return itemColumns;
+  };
+
+  return (
+    <View style={[styles.list, styles.listColumn]}>
+      {getColumnsItems(items, itemsPerCol).map((column, i) => (
+        <View key={`column-${i}`}>
+          {column.map((skill, index) => (
+            <View key={`skill-${index}`} style={[styles.listItem]}>
+              <Text>•</Text>
+              <Text>{skill}</Text>
+            </View>
+          ))}
+        </View>
+      ))}
+    </View>
+  );
+};
+
 // Document Component
 const ResumePDF = () => {
+  const getLanguages = (languages: Language[]) => {
+    return languages.map((language) =>
+      joinValuesToString(language, ['language', 'level'])
+    );
+  };
+
   return (
     <Document>
       <Page size="LETTER" style={[styles.page]}>
@@ -125,20 +185,20 @@ const ResumePDF = () => {
               Full-stack Web Developer and JavaScript programmer oriented to the
               frontend side. Core skills programming with JavaScript ES6,
               TypeScript, SQL MongoDB, ExpressJs, ReactJs, NodeJs, HTML & CSS.
-              With a strong passion for continuous learning and
-              self-improvement. Experienced in collaborating effectively within
-              diverse groups, I thrive in fast-paced environments where I can
-              utilize my adaptability to quickly acquire new skills. Always
-              eager to embrace new challenges and expand my knowledge base.
+              With passion for continuous learning and self-improvement.
+              Experienced in collaborating effectively within diverse groups, I
+              thrive in fast-paced environments where I can utilize my
+              adaptability to quickly acquire new skills. Always eager to
+              embrace new challenges and expand my knowledge base.
             </Text>
           </View>
-          <View wrap={false}>
+          <View>
             <Text style={[styles.title2, styles.sectionTitle]}>
               Work Experience
             </Text>
             <View style={[styles.subsectionsContainer]}>
               {WORK_EXPERIENCE.map((work, index) => (
-                <View key={`exp-${index}`}>
+                <View key={`exp-${index}`} wrap={false}>
                   <View style={[styles.subsectionTitle]}>
                     <View>
                       <Text style={[styles.title3]}>{work.companyName}</Text>
@@ -263,29 +323,16 @@ const ResumePDF = () => {
           <View wrap={false}>
             <Text style={[styles.title2, styles.sectionTitle]}>Skills</Text>
             <View style={[styles.subsectionsContainer]}>
-              <View style={[styles.list]}>
-                {SKILLS.map((skill, index) => (
-                  <View key={`skill-${index}`} style={[styles.listItem]}>
-                    <Text>•</Text>
-                    <Text>{skill}</Text>
-                  </View>
-                ))}
-              </View>
+              <ListWithColumns items={SKILLS} />
             </View>
           </View>
           <View wrap={false}>
             <Text style={[styles.title2, styles.sectionTitle]}>Languages</Text>
             <View style={[styles.subsectionsContainer]}>
-              <View style={[styles.list]}>
-                {LANGUAGES.map((language, index) => (
-                  <View key={`skill-${index}`} style={[styles.listItem]}>
-                    <Text>•</Text>
-                    <Text>
-                      {language.language} - {language.level}
-                    </Text>
-                  </View>
-                ))}
-              </View>
+              <ListWithColumns
+                items={getLanguages(LANGUAGES)}
+                itemsPerCol={1}
+              />
             </View>
           </View>
         </View>
