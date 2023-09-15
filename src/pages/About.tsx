@@ -1,4 +1,5 @@
 import profilePic from '../assets/images/profilePic.jpg';
+import { SKILLS } from '../common/const';
 
 const About = () => {
   return (
@@ -20,18 +21,10 @@ const About = () => {
             <div className="flex flex-col gap-2">
               <p>I have experience working with:</p>
               <ul className="list-disc columns-2 ps-6 sm:columns-3">
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>NodeJs</li>
-                <li>ExpressJs</li>
-                <li>MongoDB</li>
-                <li>Git</li>
-                <li>Material UI</li>
-                <li>Bootstrap</li>
-                <li>Bootstrap</li>
-                <li>Tailwind</li>
-                <li>HTML & CSS</li>
+                {SKILLS.map((skill, index) => (
+                  <li key={`skill-${index}`}>{skill}</li>
+                ))}
+                
               </ul>
             </div>
             <p>
