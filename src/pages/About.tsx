@@ -23,8 +23,7 @@ const About = () => {
               <ul className="list-disc columns-2 ps-6 sm:columns-3">
                 {SKILLS.map((skill, index) => (
                   <li key={`skill-${index}`}>{skill}</li>
-                ))}
-                
+                ))}          
               </ul>
             </div>
             <p>
