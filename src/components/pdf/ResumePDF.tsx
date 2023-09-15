@@ -171,7 +171,7 @@ const ListWithColumns = ({
 const ResumePDF = () => {
   const getLanguages = (languages: Language[]) => {
     return languages.map((language) =>
-      joinValuesToString(language, ['language', 'level'])
+      joinValuesToString(language, ['language', 'level'], ' - ')
     );
   };
 
