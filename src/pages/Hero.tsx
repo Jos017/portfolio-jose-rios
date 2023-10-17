@@ -13,7 +13,7 @@ const Hero = () => {
           </h2>
         </div>
         <p>
-          I'm a Fullstack web developer, focused in Fronted side. I used to be
+          I'm a Fullstack web developer, always learning new things. I used to be
           Electromechanical Engineering. I love playing video games
         </p>
       </div>

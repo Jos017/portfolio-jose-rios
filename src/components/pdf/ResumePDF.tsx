@@ -198,14 +198,14 @@ const ResumePDF = () => {
           </View>
           <View>
             <Text>
-              Full-stack Web Developer and JavaScript programmer oriented to the
-              frontend side. Core skills programming with JavaScript ES6,
-              TypeScript, SQL MongoDB, ExpressJs, ReactJs, NodeJs, HTML & CSS.
-              With passion for continuous learning and self-improvement.
-              Experienced in collaborating effectively within diverse groups, I
-              thrive in fast-paced environments where I can utilize my
-              adaptability to quickly acquire new skills. Always eager to
-              embrace new challenges and expand my knowledge base.
+              Full-stack Web Developer and JavaScript programmer. Core skills
+              programming with JavaScript ES6, TypeScript, SQL MongoDB,
+              ExpressJs, ReactJs, NodeJs, Unit Testing, HTML & CSS. With passion
+              for continuous learning and self-improvement. Experienced in
+              collaborating effectively within diverse groups, I thrive in
+              fast-paced environments where I can utilize my adaptability to
+              quickly acquire new skills. Always eager to embrace new challenges
+              and expand my knowledge base.
             </Text>
           </View>
           <View>

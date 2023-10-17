@@ -12,18 +12,18 @@ const About = () => {
         <div className="flex h-full w-full flex-wrap justify-center gap-8">
           <div className="flex max-w-xl flex-col gap-6">
             <p>
-              I'm a Full-stack Web Developer focused in the fronted side,
-              JavaScript programmer, self-taught, good at working with groups, I
-              can learn new things very fast. Enthusiast of video games and 3D
-              design. I also like reading a lot and watch movies. Always looking
-              for something new to learn.
+              I'm a Full-stack Web Developer, JavaScript programmer,
+              self-taught, good at working with groups, I can learn new things
+              very fast. Enthusiast of video games and 3D design. I also like
+              reading a lot and watch movies. Always looking for something new
+              to learn.
             </p>
             <div className="flex flex-col gap-2">
               <p>I have experience working with:</p>
               <ul className="list-disc columns-2 ps-6 sm:columns-3">
                 {SKILLS.map((skill, index) => (
                   <li key={`skill-${index}`}>{skill}</li>
-                ))}          
+                ))}
               </ul>
             </div>
             <p>

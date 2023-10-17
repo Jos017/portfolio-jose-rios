@@ -181,6 +181,19 @@ const WORK_EXPERIENCE: WorkExperience[] = [
     location: { country: 'Bolivia', city: 'La Paz' },
   },
   {
+    jobTitle: 'Freelance Backend Developer',
+    companyName: 'TUCASA',
+    startDate: new Date(2022, 9),
+    endDate: new Date(2023, 1),
+    workDone: [
+      'Developed a secure and efficient API for managing rental properties, incorporating user authentication and authorization using JWT (JSON Web Tokens).',
+      'Designed and implemented RESTful endpoints for property data, enabling Create, Read, Update, and Delete (CRUD) operations.',
+      'Wrote unit tests using Jest to ensure the reliability and stability of the API, reducing the occurrence of critical errors and enhancing overall performance.',
+      'Technologies Used: NodeJs, TypeScript, ExpressJs, MongoDB, JWT, Jest.',
+    ],
+    location: { country: 'Bolivia', city: 'La Paz' },
+  },
+  {
     jobTitle: 'Electromechanical Maintenance Engineer',
     companyName: 'SOL-MIND',
     startDate: new Date(2017, 10),
