@@ -182,7 +182,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     jobTitle: 'Freelance Backend Developer',
-    companyName: 'TUCASA',
+    companyName: 'Casa Fácil',
     startDate: new Date(2022, 9),
     endDate: new Date(2023, 1),
     workDone: [
